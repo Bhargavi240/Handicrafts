@@ -36,14 +36,14 @@ export default function LoginPage() {
         password: formData.password
       });
       if (data.error) {
-  setError(data.error);
-} else if (data.token) {
-  login(data.token, data.user);
-  router.push("/shop");
-} else {
-  setError("Login failed. Token not received.");
-}
-    } catch (err: any) {
+        setError(data.error);
+      } else if (data.token) {
+        login(data.token, data.user);
+        router.push("/shop");
+      } else {
+        setError("Invalid response from server.");
+      }
+    } catch (err) {
       setError("An unexpected error occurred. Please try again.");
     } finally {
       setIsLoading(false);

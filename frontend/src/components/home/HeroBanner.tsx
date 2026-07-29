@@ -18,7 +18,6 @@ export default function HeroBanner() {
     <section ref={ref} className="relative w-full h-[90vh] flex items-center justify-center overflow-hidden bg-brand-brown">
       {/* Background Image Placeholder */}
       <motion.div 
-        style={{ y: backgroundY }}
         initial={{ scale: 1.1, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         transition={{ duration: 1.5, ease: "easeOut" }}

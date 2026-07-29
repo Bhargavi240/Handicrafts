@@ -44,11 +44,13 @@ export default function RegisterPage() {
       const data = await register(formData);
       if (data.error) {
         setError(data.error);
-      } else {
+      } else if (data.token) {
         login(data.token, data.user);
         router.push("/shop");
+      } else {
+        setError("Invalid response from server.");
       }
-    } catch (err: any) {
+    } catch (err) {
       setError("An unexpected error occurred. Please try again.");
     } finally {
       setIsLoading(false);

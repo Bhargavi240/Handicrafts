@@ -28,7 +28,7 @@ export default function ShopPage() {
     loadProducts();
   }, []);
 
-  const filteredProducts = products.filter(p => selectedCategory === "All" || p.category === selectedCategory);
+  const filteredProducts = products.filter(p => selectedCategory === "All" || p.categoryId === selectedCategory);
 
   return (
     <div className="max-w-7xl mx-auto px-6 py-12 w-full flex flex-col md:flex-row gap-8">
