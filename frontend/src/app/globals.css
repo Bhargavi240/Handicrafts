@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+@theme {
+  /* Brand Colors */
+  --color-brand-cream: #Fdfbf7;
+  --color-brand-brown: #3E2723;
+  --color-brand-gold: #D4AF37;
+  --color-brand-maroon: #800000;
+  --color-brand-beige: #F5F5DC;
+
+  --font-sans: var(--font-poppins), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-playfair), ui-serif, Georgia, serif;
+}
+
+@keyframes gradientBG {
+	0% { background-position: 0% 50%; }
+	50% { background-position: 100% 50%; }
+	100% { background-position: 0% 50%; }
+}
+
+:root {
+  --background: #FFFFFF;
+  --foreground: #111827; /* Dark Gray for text */
+}
+
+body {
+  /* A bright, airy, animated white/light-gray gradient */
+  background: linear-gradient(-45deg, #FFFFFF, #F8FAFC, #F3F4F6, #FFFFFF);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  color: var(--foreground);
+  @apply font-sans antialiased;
+}
