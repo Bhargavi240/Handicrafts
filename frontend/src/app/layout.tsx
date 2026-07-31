@@ -15,6 +15,8 @@ const playfairDisplay = Playfair_Display({
   weight: ["400", "500", "600", "700"],
 });
 
+export const runtime = 'edge';
+
 export const metadata: Metadata = {
   title: "Aangi Handicrafts | Premium Women's Ethnic Wear",
   description: "Shop premium quality handcrafted women's ethnic wear including Sarees, Kurtis, Lehengas, and more at Aangi Handicrafts.",
