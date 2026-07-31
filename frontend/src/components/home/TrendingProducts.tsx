@@ -102,7 +102,7 @@ export default function TrendingProducts() {
               </div>
               
               <div className="p-6 text-center">
-                <Link href={`/product/${product.id}`}>
+                <Link href={`/product?id=${product.id}`}>
                   <h3 className="font-serif text-lg text-brand-cream hover:text-brand-gold transition-colors mb-2 line-clamp-1 tracking-wide">
                     {product.name}
                   </h3>

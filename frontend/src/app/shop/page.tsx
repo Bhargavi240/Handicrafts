@@ -153,7 +153,7 @@ export default function ShopPage() {
                     <button className="bg-white p-3 rounded-full text-brand-brown hover:bg-brand-gold hover:text-white transition-colors shadow-lg translate-y-4 group-hover:translate-y-0 transition-all duration-300 delay-75">
                       <Heart size={20} />
                     </button>
-                    <Link href={`/product/${product.id}`} className="bg-white p-3 rounded-full text-brand-brown hover:bg-brand-gold hover:text-white transition-colors shadow-lg translate-y-4 group-hover:translate-y-0 transition-all duration-300 delay-100">
+                    <Link href={`/product?id=${product.id}`} className="bg-white p-3 rounded-full text-brand-brown hover:bg-brand-gold hover:text-white transition-colors shadow-lg translate-y-4 group-hover:translate-y-0 transition-all duration-300 delay-100">
                       <Eye size={20} />
                     </Link>
                     <button className="bg-white p-3 rounded-full text-brand-brown hover:bg-brand-gold hover:text-white transition-colors shadow-lg translate-y-4 group-hover:translate-y-0 transition-all duration-300 delay-150">
@@ -164,7 +164,7 @@ export default function ShopPage() {
                 
                 <div className="p-5 text-center">
                   <p className="text-xs text-brand-brown/50 uppercase tracking-widest mb-1">Product</p>
-                  <Link href={`/product/${product.id}`}>
+                  <Link href={`/product?id=${product.id}`}>
                     <h3 className="font-serif text-lg text-brand-brown hover:text-brand-gold transition-colors mb-2 line-clamp-1">
                       {product.name}
                     </h3>

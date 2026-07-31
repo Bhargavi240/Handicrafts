@@ -5,15 +5,16 @@ import Image from "next/image";
 import Link from "next/link";
 import { Filter, ChevronDown, Heart, ShoppingBag, Eye, X, Loader2, ArrowLeft } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import { useParams } from "next/navigation";
+import { useSearchParams } from "next/navigation";
+import { Suspense } from "react";
 
 import { getProducts, Product } from "@/lib/api";
 
 const sortOptions = ["Latest", "Price Low to High", "Price High to Low", "Popular"];
 
-export default function CategoryPage() {
-  const params = useParams();
-  const slug = params?.slug as string || "";
+function CategoryPageContent() {
+  const searchParams = useSearchParams();
+  const slug = searchParams?.get("slug") as string || "";
   
   const categoryName = slug.charAt(0).toUpperCase() + slug.slice(1);
 
@@ -99,7 +100,7 @@ export default function CategoryPage() {
                   <button className="bg-white p-3 rounded-full text-brand-brown hover:bg-brand-gold hover:text-white transition-colors shadow-lg translate-y-4 group-hover:translate-y-0 transition-all duration-300 delay-75">
                     <Heart size={20} />
                   </button>
-                  <Link href={`/product/${product.id}`} className="bg-white p-3 rounded-full text-brand-brown hover:bg-brand-gold hover:text-white transition-colors shadow-lg translate-y-4 group-hover:translate-y-0 transition-all duration-300 delay-100">
+                  <Link href={`/product?id=${product.id}`} className="bg-white p-3 rounded-full text-brand-brown hover:bg-brand-gold hover:text-white transition-colors shadow-lg translate-y-4 group-hover:translate-y-0 transition-all duration-300 delay-100">
                     <Eye size={20} />
                   </Link>
                   <button className="bg-white p-3 rounded-full text-brand-brown hover:bg-brand-gold hover:text-white transition-colors shadow-lg translate-y-4 group-hover:translate-y-0 transition-all duration-300 delay-150">
@@ -109,7 +110,7 @@ export default function CategoryPage() {
               </div>
               
               <div className="p-5 text-center">
-                <Link href={`/product/${product.id}`}>
+                <Link href={`/product?id=${product.id}`}>
                   <h3 className="font-serif text-lg text-brand-cream hover:text-brand-gold transition-colors mb-2 line-clamp-1">
                     {product.name}
                   </h3>
@@ -125,5 +126,13 @@ export default function CategoryPage() {
         )}
       </motion.div>
     </div>
+  );
+}
+
+export default function CategoryPage() {
+  return (
+    <Suspense fallback={<div className="flex justify-center items-center min-h-[60vh]">Loading...</div>}>
+      <CategoryPageContent />
+    </Suspense>
   );
 }

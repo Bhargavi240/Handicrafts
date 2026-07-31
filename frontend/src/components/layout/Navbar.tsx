@@ -54,15 +54,15 @@ export default function Navbar() {
             Shop
             <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-brand-gold transition-all group-hover:w-full"></span>
           </Link>
-          <Link href="/category/sarees" className="text-white hover:text-brand-gold transition-colors relative group">
+          <Link href="/category?slug=sarees" className="text-white hover:text-brand-gold transition-colors relative group">
             Sarees
             <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-brand-gold transition-all group-hover:w-full"></span>
           </Link>
-          <Link href="/category/kurtis" className="text-white hover:text-brand-gold transition-colors relative group">
+          <Link href="/category?slug=kurtis" className="text-white hover:text-brand-gold transition-colors relative group">
             Kurtis
             <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-brand-gold transition-all group-hover:w-full"></span>
           </Link>
-          <Link href="/category/lehengas" className="text-white hover:text-brand-gold transition-colors relative group">
+          <Link href="/category?slug=lehengas" className="text-white hover:text-brand-gold transition-colors relative group">
             Lehengas
             <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-brand-gold transition-all group-hover:w-full"></span>
           </Link>

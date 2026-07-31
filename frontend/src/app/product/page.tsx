@@ -1,15 +1,17 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { useParams } from "next/navigation";
+import { useSearchParams } from "next/navigation";
+import { Suspense } from "react";
 import Image from "next/image";
 import { Star, Heart, Share2, ShieldCheck, Truck, RotateCcw, Loader2 } from "lucide-react";
 import { motion } from "framer-motion";
 import { getProduct, Product } from "@/lib/api";
 import { useCart } from "@/context/CartContext";
 
-export default function ProductDetails() {
-  const { id } = useParams() as { id: string };
+function ProductDetailsContent() {
+  const searchParams = useSearchParams();
+  const id = searchParams.get("id") as string;
   const { addToCart } = useCart();
   const [product, setProduct] = useState<Product | null>(null);
   const [isLoading, setIsLoading] = useState(true);
@@ -153,5 +155,13 @@ export default function ProductDetails() {
         </div>
       </div>
     </div>
+  );
+}
+
+export default function ProductDetails() {
+  return (
+    <Suspense fallback={<div className="flex justify-center items-center min-h-[60vh]">Loading...</div>}>
+      <ProductDetailsContent />
+    </Suspense>
   );
 }

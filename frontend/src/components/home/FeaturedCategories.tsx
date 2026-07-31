@@ -8,22 +8,22 @@ const categories = [
   {
     name: "Sarees",
     image: "https://images.unsplash.com/photo-1583391733958-d25e07fac04f?q=80&w=600&auto=format&fit=crop",
-    link: "/category/sarees"
+    link: "/category?slug=sarees"
   },
   {
     name: "Kurtis",
     image: "https://images.unsplash.com/photo-1595777457583-95e059d581b8?q=80&w=600&auto=format&fit=crop",
-    link: "/category/kurtis"
+    link: "/category?slug=kurtis"
   },
   {
     name: "Lehengas",
     image: "https://images.unsplash.com/photo-1583391733958-d25e07fac04f?q=80&w=600&auto=format&fit=crop",
-    link: "/category/lehengas"
+    link: "/category?slug=lehengas"
   },
   {
     name: "Co-ord Sets",
     image: "https://images.unsplash.com/photo-1585487000160-6ebcfceb0d03?q=80&w=600&auto=format&fit=crop",
-    link: "/category/coord-sets"
+    link: "/category?slug=coord-sets"
   }
 ];
 
