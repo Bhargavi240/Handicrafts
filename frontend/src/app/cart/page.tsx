@@ -31,7 +31,7 @@ export default function CartPage() {
                   <div className="col-span-1 md:col-span-6 flex items-center gap-4">
                     <div className="relative w-20 h-24 bg-white/5 flex-shrink-0">
                       <Image 
-                        src={item.product.images && item.product.images.length > 0 ? item.product.images[0] : "https://images.unsplash.com/photo-1610189013233-317180b5b139?q=80&w=200"} 
+                        src={item.product.images && item.product.images.length > 0 ? item.product.images[0] : "https://images.unsplash.com/photo-1583391733958-d25e07fac04f?q=80&w=200"} 
                         alt={item.product.name} 
                         fill 
                         className="object-cover" 

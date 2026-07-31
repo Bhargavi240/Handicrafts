@@ -143,7 +143,7 @@ export default function ShopPage() {
               >
                 <div className="relative h-80 overflow-hidden">
                   <Image 
-                    src={product.images && product.images.length > 0 ? product.images[0] : "https://images.unsplash.com/photo-1610189013233-317180b5b139?q=80&w=600"}
+                    src={product.images && product.images.length > 0 ? product.images[0] : "https://images.unsplash.com/photo-1583391733958-d25e07fac04f?q=80&w=600"}
                     alt={product.name}
                     fill
                     className="object-cover transition-transform duration-700 group-hover:scale-110"

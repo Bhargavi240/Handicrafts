@@ -11,7 +11,7 @@ const products = [
     name: "Crimson Silk Saree",
     price: 4500,
     discount: 10,
-    image: "https://images.unsplash.com/photo-1610189013233-317180b5b139?q=80&w=600&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1583391733958-d25e07fac04f?q=80&w=600&auto=format&fit=crop",
     rating: 4.8
   },
   {
@@ -27,7 +27,7 @@ const products = [
     name: "Royal Blue Velvet Lehenga",
     price: 12500,
     discount: 0,
-    image: "https://images.unsplash.com/photo-1583391733975-520689e4c19a?q=80&w=600&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1583391733958-d25e07fac04f?q=80&w=600&auto=format&fit=crop",
     rating: 5.0
   },
   {

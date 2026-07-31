@@ -76,7 +76,7 @@ export default function AccountPage() {
                     </div>
                     <div className="flex items-center gap-4">
                       <div className="w-16 h-20 bg-gray-200 relative overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1610189013233-317180b5b139?q=80&w=200" alt="" className="object-cover w-full h-full" />
+                        <img src="https://images.unsplash.com/photo-1583391733958-d25e07fac04f?q=80&w=200" alt="" className="object-cover w-full h-full" />
                       </div>
                       <div>
                         <h4 className="font-medium text-brand-brown">Crimson Silk Saree</h4>

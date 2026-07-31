@@ -27,7 +27,7 @@ export default function ProductDetails() {
       if (data && data.images && data.images.length > 0) {
         setMainImage(data.images[0]);
       } else {
-        setMainImage("https://images.unsplash.com/photo-1610189013233-317180b5b139?q=80&w=800");
+        setMainImage("https://images.unsplash.com/photo-1583391733958-d25e07fac04f?q=80&w=800");
       }
       setIsLoading(false);
     }

@@ -67,18 +67,18 @@ export default function LoginPage() {
 
       <motion.div
         animate={{
-          scale: [1, 1.1, 1],
-          opacity: [0.3, 0.5, 0.3],
+          scale: 1.1,
+          opacity: 0.5,
         }}
-        transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+        transition={{ duration: 4, repeat: Infinity, repeatType: "mirror", ease: "easeInOut" }}
         className="absolute top-0 right-0 w-[40rem] h-[40rem] bg-brand-gold/10 rounded-full mix-blend-multiply filter blur-3xl z-0 -translate-y-1/2 translate-x-1/2"
       />
       <motion.div
         animate={{
-          scale: [1, 1.2, 1],
-          opacity: [0.2, 0.4, 0.2],
+          scale: 1.2,
+          opacity: 0.4,
         }}
-        transition={{ duration: 10, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+        transition={{ duration: 5, repeat: Infinity, repeatType: "mirror", ease: "easeInOut", delay: 1 }}
         className="absolute bottom-0 left-0 w-[30rem] h-[30rem] bg-amber-100/40 rounded-full mix-blend-multiply filter blur-3xl z-0 translate-y-1/3 -translate-x-1/3"
       />
 

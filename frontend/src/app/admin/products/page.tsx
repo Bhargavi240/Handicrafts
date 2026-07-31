@@ -142,7 +142,7 @@ export default function AdminProductsPage() {
                         <div className="flex items-center gap-5">
                           <div className="relative w-16 h-16 bg-gray-200 rounded-md overflow-hidden flex-shrink-0 border-2 border-gray-300 group-hover:border-brand-gold transition-colors shadow-sm">
                             <Image 
-                              src={product.images && product.images.length > 0 ? product.images[0] : "https://images.unsplash.com/photo-1610189013233-317180b5b139?q=80&w=100"} 
+                              src={product.images && product.images.length > 0 ? product.images[0] : "https://images.unsplash.com/photo-1583391733958-d25e07fac04f?q=80&w=100"} 
                               alt={product.name} 
                               fill 
                               className="object-cover opacity-100" 
